@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{# Pour afficle le nom qui sera donner pour le parent (base.html.twing) #}
+{% block title %} {{ parent() }}  {% endblock %}
+
+
+
+{% block body %}
+
+<section class="landing">
+    <div class="landing-overlay">
+<h2>Ludotec, votre coompangon de jeux</h2>
+    <p> Gérez votre ludothéque facilment et partagez vos critiques</p>
+    <a href="#" class="button">Decouvrir les jeux</a>
+    </div>
+</section>
+{% endblock %}

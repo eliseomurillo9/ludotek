@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device_width, initial-scale=&">
+		<title>
+			{% block title %}
+				Accueil - Ludotek
+			{% endblock %}
+		</title>
+
+		{# Cela ajote le style css et asset permet le vincule avec le fichier app.css #}
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="{{ asset('css/reset.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/app.css') }}"> {% block stylesheets %}{% endblock %}
+
+		{% block javascripts %}
+			{{ encore_entry_script_tags('app') }}
+		{% endblock %}
+	</head>
+	<body>
+			{% include "/components/header.html.twig" %}
+		<main>
+			{% block body %}{% endblock %}
+		</main>
+
+			{% include "/components/footer.html.twig" %}
+	</body>
+</html>
